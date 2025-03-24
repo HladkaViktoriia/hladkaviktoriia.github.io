@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="content">
+      <header class="header">
+        <div class="container">
+          <div class="header__top">
+            <a class="header__logo" href="">
+              <img src="./img/logo.svg" alt="logo">
+            </a>
+            <div class="exchange-rates">
+              <div class="exchange-rates__item">
+                <div class="exchange-rates__item-img">
+                  <img src="./img/icon__ensign-1.svg" alt="">
+                  <span class="exchange-rates__item-name">USD</span>
+                </div>
+                <div class="exchange-rates__item-cols">
+                  <div class="exchange-rates__item-col">
+                    <div class="exchange-rates__item-title">
+                      НБУ
+                    </div>
+                    <div class="exchange-rates__item-num">
+                      36.56
+                    </div>
+                  </div>
+                  <div class="exchange-rates__item-col">
+                    <div class="exchange-rates__item-title">
+                      Готівка
+                    </div>
+                    <div class="exchange-rates__item-num">
+                      40.30
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="exchange-rates__item">
+                <div class="exchange-rates__item-img">
+                  <img src="./img/icon__ensign-2.svg" alt="">
+                  <span class="exchange-rates__item-name">EUR</span>
+                </div>
+                <div class="exchange-rates__item-cols">
+                  <div class="exchange-rates__item-col">
+                    <div class="exchange-rates__item-title">
+                      НБУ
+                    </div>
+                    <div class="exchange-rates__item-num">
+                      37.76
+                    </div>
+                  </div>
+                  <div class="exchange-rates__item-col">
+                    <div class="exchange-rates__item-title">
+                      Готівка
+                    </div>
+                    <div class="exchange-rates__item-num">
+                      41.00
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="header__btn">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </div>
+        </div>
+        <!-- <div class="header__middle">
+          <div class="container">
+            <ul class="header__themes">
+              <li>
+                <a href="#">спецтема</a>
+              </li>
+              <li>
+                <a href="#">спецтема</a>
+              </li>
+              <li>
+                <a href="#">спецтема</a>
+              </li>
+            </ul>
+          </div>
+        </div> -->
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-inner">
+              <div class="header__calc">
+                Втрати орків:
+                <span>99999</span>
+              </div>
+              <nav class="header__nav">
+                <ul>
+                  <li>
+                    <a href="#">Економіка</a>
+                  </li>
+                  <li>
+                    <a href="#">Політика</a>
+                  </li>
+                  <li>
+                    <a href="#">Мир</a>
+                  </li>
+                </ul>
+              </nav>
+              <form class="header__search">
+                <input type="text" placeholder="Пошук">
+                <button></button>
+              </form>
+              <div class="exchange-rates exchange-rates--mob">
+                <div class="exchange-rates__item">
+                  <div class="exchange-rates__item-img">
+                    <img src="./img/icon__ensign-1.svg" alt="">
+                    <span class="exchange-rates__item-name">USD</span>
+                  </div>
+                  <div class="exchange-rates__item-cols">
+                    <div class="exchange-rates__item-col">
+                      <div class="exchange-rates__item-title">
+                        НБУ
+                      </div>
+                      <div class="exchange-rates__item-num">
+                        36.56
+                      </div>
+                    </div>
+                    <div class="exchange-rates__item-col">
+                      <div class="exchange-rates__item-title">
+                        Готівка
+                      </div>
+                      <div class="exchange-rates__item-num">
+                        40.30
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="exchange-rates__item">
+                  <div class="exchange-rates__item-img">
+                    <img src="./img/icon__ensign-2.svg" alt="">
+                    <span class="exchange-rates__item-name">EUR</span>
+                  </div>
+                  <div class="exchange-rates__item-cols">
+                    <div class="exchange-rates__item-col">
+                      <div class="exchange-rates__item-title">
+                        НБУ
+                      </div>
+                      <div class="exchange-rates__item-num">
+                        37.76
+                      </div>
+                    </div>
+                    <div class="exchange-rates__item-col">
+                      <div class="exchange-rates__item-title">
+                        Готівка
+                      </div>
+                      <div class="exchange-rates__item-num">
+                        41.00
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="main-box">
+          <div class="container">
+            <div class="main-box__inner">
+              <div class="col">
+                <h2 class="title">ТОП НОВИНИ</h2>
+
+                <div class="col-articles col-articles--main">
+                  <div class="col-articles__main">
+                    <div class="col-articles__img">
+                      <a href="#">
+                        <img src="https://gdb.rferl.org/088f0000-0a00-0242-f9f2-08dac972c285_w650_r1.jpg" alt="">
+                      </a>
+                    </div>
+                    <a class="col-articles__text" href="#">
+                      <h4>
+                        Детально про наслідки ударів по енергооб’єктах, «примус до переговорів» і «передислокацію
+                        армії РФ»
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="col-articles__item">
+                    <div class="col-articles__img">
+                      <a href="#">
+                        <img src="https://gdb.rferl.org/4121B458-CC83-46AA-9FB6-D418D6C8FC1B_w256_r1.jpg" alt="">
+                      </a>
+                    </div>
+                    <a class="col-articles__text" href="#">
+                      <h4>
+                        Систему ППО Hawk готують до роботи в Україні – Повітряні сили ЗСУ
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="col-articles__item">
+                    <div class="col-articles__img">
+                      <a href="#">
+                        <img src="https://gdb.rferl.org/084a0000-0a00-0242-f107-08d9f7663b08_w256_r1.jpg" alt="">
+                      </a>
+                    </div>
+                    <a class="col-articles__text" href="#">
+                      <h4>
+                        Війна Росії проти України. Відсіч. Усі новини на цей час
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="col-articles__item">
+                    <div class="col-articles__img">
+                      <a href="#">
+                        <img src="https://gdb.rferl.org/4121B458-CC83-46AA-9FB6-D418D6C8FC1B_w256_r1.jpg" alt="">
+                      </a>
+                    </div>
+                    <a class="col-articles__text" href="#">
+                      <h4>
+                        Систему ППО Hawk готують до роботи в Україні – Повітряні сили ЗСУ
+                      </h4>
+                    </a>
+                  </div>
+                  <div class="col-articles__item">
+                    <div class="col-articles__img">
+                      <a href="#">
+                        <img src="https://gdb.rferl.org/084a0000-0a00-0242-f107-08d9f7663b08_w256_r1.jpg" alt="">
+                      </a>
+                    </div>
+                    <a class="col-articles__text" href="#">
+                      <h4>
+                        Війна Росії проти України. Відсіч. Усі новини на цей час
+                      </h4>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col cols">
+                <div class="col">
+                  <h2 class="title">
+                    <a href="#">НОВИНИ</a>
+                  </h2>
+                  <ul class="main-box__news">
+                    <li class="main-box__news-item">
+                      <span class="date">13:30</span>
+                      <h4>
+                        <a href="#">
+                          Без світла залишаються понад 10 мільйонів українців – президент
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">13:14</span>
+                      <h4>
+                        <a href="#">
+                          Держкіно: у Довженко-Центрі призначений новий т.в.о. гендиректора
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:57</span>
+                      <h4>
+                        <a href="#">
+                          Делегація Білорусі їде в Іран говорити про виробництво снарядів – розвідка
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:31</span>
+                      <h4>
+                        <a href="#">
+                          Тисячі людей мітингували у Чорногорії із закликом до дострокових виборів
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">13:30</span>
+                      <h4>
+                        <a href="#">
+                          Без світла залишаються понад 10 мільйонів українців – президент
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">13:14</span>
+                      <h4>
+                        <a href="#">
+                          Держкіно: у Довженко-Центрі призначений новий т.в.о. гендиректора
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:57</span>
+                      <h4>
+                        <a href="#">
+                          Делегація Білорусі їде в Іран говорити про виробництво снарядів – розвідка
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:31</span>
+                      <h4>
+                        <a href="#">
+                          Тисячі людей мітингували у Чорногорії із закликом до дострокових виборів
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">13:14</span>
+                      <h4>
+                        <a href="#">
+                          Держкіно: у Довженко-Центрі призначений новий т.в.о. гендиректора
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:57</span>
+                      <h4>
+                        <a href="#">
+                          Делегація Білорусі їде в Іран говорити про виробництво снарядів – розвідка
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">12:31</span>
+                      <h4>
+                        <a href="#">
+                          Тисячі людей мітингували у Чорногорії із закликом до дострокових виборів
+                        </a>
+                      </h4>
+                    </li>
+                    <li class="main-box__news-item">
+                      <span class="date">13:14</span>
+                      <h4>
+                        <a href="#">
+                          Держкіно: у Довженко-Центрі призначений новий т.в.о. гендиректора
+                        </a>
+                      </h4>
+                    </li>
+                  </ul>
+                </div>
+
+                <aside class="col">
+                  <h2 class="title">ПРЯМИЙ ЕФІР</h2>
+                  <div class="live">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/3LkVsqSnRxU"
+                      title="YouTube video player" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowfullscreen></iframe>
+                  </div>
+
+                  <h2 class="title">Топ відео</h2>
+                  <div class="wrapper">
+                    <div class="tabs">
+                      <span class="tab active" data-id="1">Нове</span>
+                      <span class="tab" data-id="2">Головне</span>
+                    </div>
+                    <div class="tab_content">
+                      <div class="tab-item active-tab" id="1">
+                        <div class="col-articles col-articles--aside col-articles--video">
+                          <div class="col-articles__main">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/008e0000-0aff-0242-5869-08dac8db41de_tv_w408_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              «Голий Путін» піде з молотка, прапори України, антиурядові протести у Празі
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/01af0000-0aff-0242-8da3-08dac72a3731_tv_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              До Миколаєва прибув перший від 24 лютого потяг
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/01af0000-0aff-0242-8da3-08dac72a3731_tv_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              До Миколаєва прибув перший від 24 лютого потяг
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-item" id="2">
+                        <div class="col-articles col-articles--aside col-articles--video">
+                          <div class="col-articles__main">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/008e0000-0aff-0242-00c9-08dac812a0f7_tv_w408_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              «Якби мене бомбили, я б не сказав, що це щось позитивне». Москвичі про наслідки
+                              війни для України (опитування)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/01af0000-0aff-0242-8da3-08dac72a3731_tv_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              До Миколаєва прибув перший від 24 лютого потяг
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/01af0000-0aff-0242-8da3-08dac72a3731_tv_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              До Миколаєва прибув перший від 24 лютого потяг
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img src="https://gdb.rferl.org/01af0000-0aff-0242-8da3-08dac72a3731_tv_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              До Миколаєва прибув перший від 24 лютого потяг
+                            </a>
+                          </div>
+                          <div class="col-articles__item">
+                            <div class="col-articles__img">
+                              <a href="#">
+                                <img
+                                  src="https://gdb.rferl.org/00930000-0aff-0242-9d14-08dac7ac1e42_cx0_cy4_cw0_w144_r1.jpg"
+                                  alt="">
+                              </a>
+                            </div>
+                            <a class="col-articles__text" href="#">
+                              Як живе звільнений Херсон? (фотосвідчення)
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+
+              <div class="main-box__btn">
+                <button class="more">Більше</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid-articles">
+          <div class="container">
+            <div class="grid-article__row">
+              <h3 class="title">
+                Економіка
+              </h3>
+              <div class="grid-article__items">
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/008e0000-0aff-0242-6ec9-08dac9428ea4_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Битва за Донбас: головне 18 листопада (оновлюється)
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/702D6946-92D4-4EC1-A18D-0999D8365677_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Ізраїль дозволив надавати Україні зброю, яка містить ізраїльські компоненти – Haaretz
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-article__row">
+              <h3 class="title">
+                Політика
+              </h3>
+              <div class="grid-article__items">
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/702D6946-92D4-4EC1-A18D-0999D8365677_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Ізраїль дозволив надавати Україні зброю, яка містить ізраїльські компоненти – Haaretz
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/008e0000-0aff-0242-6ec9-08dac9428ea4_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Битва за Донбас: головне 18 листопада (оновлюється)
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-article__row">
+              <h3 class="title">
+                Світ
+              </h3>
+              <div class="grid-article__items">
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/008e0000-0aff-0242-6ec9-08dac9428ea4_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Битва за Донбас: головне 18 листопада (оновлюється)
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/07bd0000-0aff-0242-6b93-08da39bc3ad6_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    «Викрадення, позбавлення волі – немає складу злочину?»: як у Криму судять медсестру і блогера Ірину
+                    Данілович
+                  </a>
+                </div>
+                <div class="grid-article__item">
+                  <a class="grid-article__img" href="#">
+                    <img src="https://gdb.rferl.org/702D6946-92D4-4EC1-A18D-0999D8365677_w408_r1.jpg" alt="">
+                  </a>
+                  <a class="grid-article__text" href="#">
+                    Ізраїль дозволив надавати Україні зброю, яка містить ізраїльські компоненти – Haaretz
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__top">
+            <div class="footer__col">
+              <div class="footer__logo">
+                <img src="./img/logo.svg" alt="">
+              </div>
+              <div class="socials">
+                <span>Приєднуйтесь до нас у соцмережах:</span>
+                <ul>
+                  <li>
+                    <a href="">
+                      <img src="./img/icon__fb.svg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/icon__tg.svg" alt="">
+                    </a>
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="./img/icon__tw.svg" alt="">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <ul class="footer__nav">
+              <li>
+                <a href="#">Економіка</a>
+              </li>
+              <li>
+                <a href="#">Політика</a>
+              </li>
+              <li>
+                <a href="#">Мир</a>
+              </li>
+            </ul>
+
+            <ul class="footer__nav">
+              <li>
+                <a href="#">Структура власності</a>
+              </li>
+              <li>
+                <a href="#">Політика конфіденційності</a>
+              </li>
+            </ul>
+          </div>
+          <p class="footer__copy">
+            © 2003-2022 OWN. Вiдповiдно до п. б) част. 1 ст. 15 Закону України "Про авторське право i сумiжнi права", до
+            майнового права автора належить виключне право на дозвiл або заборону використання твору iншими особами.
+            "OWN"
+            забороняє iншим особам використовувати твори, що транслюються в ефipi "OWN", з будь-якою метою. "OWN"
+            дозволяє
+            вiльне використання матерiалiв сайту за наступних умов: збереження логотипу на зображеннях; вiдео має бути в
+            плеєрі
+            YouTube;
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
