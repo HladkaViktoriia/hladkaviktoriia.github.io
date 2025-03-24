@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Головна</title>
+    <link rel="stylesheet" href="https://wowjs.uk/css/libs/animate.css">
+    <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="content">
+            <header class="header">
+    <div class="header__top">
+        <div class="container">
+            <div class="header__top-inner">
+                <ul class="header__nav">
+                    <li>
+                        <a href="/about.html">О магазине</a>
+                    </li>
+                    <li>
+                        <a href="/page_4.html">Доставка и оплата</a>
+                    </li>
+                    <li>
+                        <a href="/contacts.html">Контакты</a>
+                    </li>
+                    <li>
+                        <a href="http://t-m.kz/brands.html">Производители</a>
+                    </li>
+                    <li>
+                        <a href="/articles.html">Статьи</a>
+                    </li>
+                    <li>
+                        <a href="http://t-m.kz/AllItem.html?cat=sale">Распродажа</a>
+                    </li>
+                    <li>
+                        <a href="/page_7.html">Условия возврата</a>
+                    </li>
+                    <li>
+                        <a href="/page_8.html">Политика конфиденциальности</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="header__bootom">
+        <div class="container">
+            <div class="header__bootom-inner">
+                <a class="logo" href="/">
+                    <img src="./img/logo.png" alt="logo">
+                </a>
+                <div class="contacts">
+                    <div class="contacts__phone">
+                        <img class="contacts__icon" src="./img/icons/icon__tel.png" alt="">
+                        <a class="contacts__phone" href="tel:+87471294747">8 (747) 129 47 47</a>
+                    </div>
+                    <div class="contacts__row">
+                        <img class="contacts__icon" src="./img/icons/icon__email.png" alt="">
+                        Для заказов:
+                        <a href="mailto:sale@toolsmart.kz">sale@toolsmart.kz</a>
+                    </div>
+                    <div class="contacts__row contacts__row--address">
+                        <img class="contacts__icon" src="./img/icons/icon__map.png" alt="">
+                        <a class="btn-popup" href="#map">г. Алматы, 20-я линия, 194</a>
+                    </div>
+                    <div class="contacts__row contacts__row--schedule">
+                        <img class="contacts__icon" src="./img/icons/icon__time.png" alt="">
+                        Пн-Пт, с 09:00 до 18:00
+                    </div>
+                </div>
+                <form class="form form--search">
+                    <input type="text" placeholder="Поиск по каталогу">
+                    <button class="btn-icon"></button>
+                </form>
+                <a class="btn-request btn-popup" href="#request">
+                    <span>Оставить заявку</span>
+                </a>
+                <div class="contacts">
+                    <div class="contacts__phone">
+                        <img class="contacts__icon" src="./img/icons/icon__tel.png" alt="">
+                        <a class="contacts__phone" href="tel:+87471294747">+8 747 129 47 47</a>
+                    </div>
+                    <div class="contacts__phone">
+                        <img class="contacts__icon" src="./img/icons/icon__tel.png" alt="">
+                        <a class="contacts__phone" href="tel:+77471794747">+7 747 179 47 47</a>
+                    </div>
+                    <div class="contacts__phone">
+                        <img class="contacts__icon" src="./img/icons/icon__tel.png" alt="">
+                        <a class="contacts__phone" href="tel:+77475194747">+7 747 519 47 47</a>
+                    </div>
+                    <a class="btn-request-call btn-popup" href="#call-back">Заказать звонок</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="popup popup--form mfp-hide" id="success">
+    <button type="button" class="mfp-close"></button>
+    <div class="popup__inner">
+        <div class="popup__title">
+            Спасибо, <br />
+            Ваша заявка успешно принята!
+        </div>
+        <div class="popup__text">
+            Наши вежливые операторы обязательно перезвонят вам в ближайшее время и ответят на все вопросы.
+        </div>
+    </div>
+</div>
+
+<div class="popup popup--map mfp-hide" id="map">
+    <button type="button" class="mfp-close"></button>
+    <div class="popup__inner">
+        <div id="map-cont"></div>
+        <script src="//api-maps.yandex.ru/2.0-stable/?load=package.standard&amp;lang=ru-RU&amp;coordorder=longlat"
+            type="text/javascript"></script>
+        <script type="text/javascript">
+            ymaps.ready(init);
+            var myMap;
+            function init() {
+                myMap = new ymaps.Map('map-cont', {
+                    center: [76.888575, 43.222049],
+                    zoom: 16,
+                    type: 'yandex#map'
+                });
+
+                myMap.controls
+                    .add('smallZoomControl', { right: 5, top: 75 })
+                    .add('typeSelector');
+
+                metka = new ymaps.Placemark([76.888575, 43.222049], 
+                {
+                    balloonContent: ''
+                }, 
+                {
+                    preset: 'twirl#redIcon', zIndex: 9999,
+                    iconImageHref: './img/icons/icon__map-2.png',
+                    iconImageSize: [25, 35]
+                });
+                myMap.geoObjects.add(metka);
+            }
+        </script>
+    </div>
+</div>
+
+<div class="popup popup--form mfp-hide" id="call-back">
+    <button type="button" class="mfp-close"></button>
+    <div class="popup__inner">
+        <div class="popup__title">
+            Обратный звонок
+        </div>
+        <div class="popup__text">
+            Укажите свой контактный телефон, и мы Вам перезвоним в ближайшие несколько минут
+        </div>
+        <form class="form popup__form">
+            <label>
+                Телефон
+                <span class="star">*</span>
+                <input type="text" class="form__phone" placeholder="+7-999-999-9999">
+            </label>
+            <button class="btn-red">
+                Я жду звонка
+            </button>
+        </form>
+    </div>
+</div>
+
+<div class="popup popup--form mfp-hide" id="request">
+    <button type="button" class="mfp-close"></button>
+    <div class="popup__inner">
+        <div class="popup__title">
+            Отправить заявку
+        </div>
+        <form class="form popup__form">
+            <label>
+                Фамилия, Имя
+                <span class="star">*</span>
+                <input type="text" maxlength="100">
+            </label>
+            <label>
+                Организация
+                <input type="text" maxlength="100">
+            </label>
+            <label>
+                Email
+                <input type="text" maxlength="100">
+            </label>
+            <label>
+                Телефон
+                <span class="star">*</span>
+                <input type="text" class="form__phone" placeholder="+7-999-999-9999">
+            </label>
+            <button class="btn-red">
+                Отправить
+            </button>
+        </form>
+    </div>
+</div> <!-- HEADER -->
+
+            <main class="main">
+                <section class="goods">
+    <div class="container">
+        <div class="goods__title wow fadeInUp">
+            Портативные ручные лазерные аппараты  STR нового поколения
+        </div>
+        <div class="goods__img">
+            <img src="./img/image_1679997653_E6is1rW6.png" alt="">
+        </div>
+        <ul class="goods__list">
+            <li class="wow fadeInUp" data-wow-delay="0.0s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Может создавать эстетически привлекательные области с большим проникновением;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.1s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Обладает длительным жизненным циклом и обеспечивает длительное время безотказной работы;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.2s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Обеспечивает хорошую производительность, включая быструю скорость работы и высокую эффективность;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.3s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Работает 24 часа в сутки×7 дней в неделю;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.4s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Рабочая температура -20 ℃-60 ℃;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.5s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Прост в эксплуатации благодаря интеллектуальным функциям + LED дисплей
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.6s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Удобен и прост в захвате благодаря эргономичному дизайну;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.7s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Безопасен и обнадеживает благодаря 8-кратной защите;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.8s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Эффективный и энергосберегающий, экологичный и безвредный для окружающей среды;
+                </div>
+            </li>
+            <li class="wow fadeInUp" data-wow-delay="0.9s">
+                <span class="goods__list-dot"></span>
+                <div class="goods__list-text">
+                    Защита здоровья работников благодаря работе без пыли.
+                </div>
+            </li>
+        </ul>
+    </div>
+</section>
+
+<div class="rects">
+    <div class="c1"></div>
+    <div class="c">
+        <img src="./img/ttround.png">
+    </div>
+    <div class="c2"></div>
+    <div class="c3"></div>
+</div> <!-- GOODS -->
+
+                <section class="product-description">
+    <div class="container">
+        <h2 class="title wow fadeInUp">
+            <b>Описание продукта</b>
+        </h2>
+        <div class="product-description__row wow fadeInUp">
+            <div class="product-description__row-text">
+                <p>
+                    Портативные лазерные сварочные аппараты серии STR-HW, основанные на самостоятельно разработанной лазерной технологии "малого диаметра сердечника", 
+                    используют новую двухконтурную систему прямого охлаждения хладагентом и интегрированную конструкцию. Эти сварочные аппараты могут предоставить 
+                    клиентам такие преимущества, как высокая эффективность, большая глубина проплавления, высокая энергоэффективность и высокое удобство. Поскольку 
+                    эти сварочные аппараты могут сваривать различные металлические материалы, включая алюминий, нержавеющую сталь, углеродистую сталь, оцинкованный 
+                    лист, латунь и т.д., они находят широкое применение, включая сварку строительных материалов; сварочные материалы, используемые для изготовления 
+                    бытовых электроприборов, кухонного оборудования и фурнитуры для ванных комнат; обработка листового металла и трубопроводов.
+                </p>
+            </div>
+            <a class="product-description__row-link btn-popup" href="#call-back">
+                <img src="./img/icons/icon__cart.png" alt="">
+            </a>
+        </div>
+
+        <h2 class="title title--desktop wow fadeInUp">
+            Особенности продукта
+        </h2>
+        <ul class="product-description__list wow fadeInUp">
+            <li>
+                Позволяет получать эстетически привлекательные сварные швы с большой глубиной проплавления;
+            </li>
+            <li>
+                Обладает длительным сроком службы и обеспечивает длительное время безотказной работы;
+            </li>
+            <li>
+                Обеспечивает хорошие эксплуатационные характеристики, включая высокую скорость обработки и эффективность;
+            </li>
+            <li>
+                Может работать 24 часа в сутки× 7 дней в неделю;
+            </li>
+            <li>
+                Разработан таким образом, чтобы быть устойчивым к высоким и низким температурам и не допускать сбоев при сварке при температуре -20 ℃-60 ℃;
+            </li>
+            <li>
+                Прост в эксплуатации благодаря интеллектуальным функциям;
+            </li>
+            <li>
+                Удобный захват благодаря эргономичному дизайну;
+            </li>
+            <li>
+                Безопасно и обнадеживающе благодаря 8-кратной конструкции защиты;
+            </li>
+            <li>
+                Эффективно и энергосберегающе, экологично и безвредно для окружающей среды;
+            </li>
+            <li>
+                Защищает здоровье работников благодаря работе без пыли.
+            </li>
+        </ul>
+
+        <div class="slider slider--3">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="slider__img">
+                        <img src="../img/products/image_1680172673_uH3GsGfh.png" alt="">
+                    </div>
+                    <div class="slider__title">
+                        STR-HW350
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider__img">
+                        <img src="../img/products/image_1680172662_Yw24S4O2.png" alt="">
+                    </div>
+                    <div class="slider__title">
+                        STR-HW450
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="slider__img">
+                        <img src="../img/products/image_1680172653_zKFNcx9O.png" alt="">
+                    </div>
+                    <div class="slider__title">
+                        STR-HW550
+                    </div>
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section> <!-- PRODUCT DESCRIPTION -->
+
+                <section class="product-parameters">
+    <div class="container">
+        <h2 class="title wow fadeInUp">
+            <b>Технические характеристики моделей</b>
+        </h2>
+        <table class="product-parameters__table wow fadeInUp">
+            <tbody>
+                <tr>
+                    <td width="109" valign="center">
+                    </td>
+                    <td width="59" valign="center">
+                    </td>
+                    <td width="133" valign="center">
+                        <p>STR-HW350</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>STR-HW450</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>STR-HW550</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Напряжение</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>В</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>220</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>220</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>220</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Частота</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>Гц</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>50/60</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>50/60</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>50/60</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Номинальная входная мощность</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>Вт</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>3800</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>4200</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>5400</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Скорость сварки</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>См/мин</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>20-80</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>20-80</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>20-80</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Толщина свариваемого металла</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>мм</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>3</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>4</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>5</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Метод охлаждения</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p></p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>Двухконтурный хладагент прямого охлаждения</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>Двухконтурный хладагент прямого охлаждения</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>Двухконтурный хладагент прямого охлаждения</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Рабочая Температура</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>℃</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>20-60</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>20-60</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>20-60</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Температура хранения</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>℃</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>30-70</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>30-70</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>30-70</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Рабочая влажность</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>%</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>0-90</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>0-90</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>0-90</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Габариты (без колес)</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>мм</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>673×480×310</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>673×505×310</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>673×505×310</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Масса</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>кг</p>
+                    </td>
+                    <td width="133" valign="center">
+                        <p>43</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>45</p>
+                    </td>
+                    <td width="152" valign="center">
+                        <p>45</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Диаметр проволоки</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p>мм</p>
+                    </td>
+                    <td width="437" valign="center" colspan="3">
+                        <p>0,8/1/1,2/1,6</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="109" valign="center">
+                        <p>Режим сварки</p>
+                    </td>
+                    <td width="59" valign="center">
+                        <p></p>
+                    </td>
+                    <td width="437" valign="center" colspan="3">
+                        <p>Точечная сварка/непрерывная точечная сварка/импульсная сварка/непрерывная сварка</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="title wow fadeInUp">
+            <b>Видео  обзор продукта</b>
+        </h2>
+        <div class="wrap-iframe wow fadeInUp">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/uF7nnycMVmw?si=Swqewfix4F64_Rq9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <h2 class="title wow fadeInUp">
+            <b>Фотографии продукта</b>
+        </h2>
+
+        <div class="product-parameters__slider slider slider--6 wow fadeInUp">
+            <div class="swiper-wrapper">
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__1.png">
+                    <img src="./img/gallery/gallery__1.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__2.png">
+                    <img src="./img/gallery/gallery__2.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__3.jpg">
+                    <img src="./img/gallery/gallery__3.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__4.png">
+                    <img src="./img/gallery/gallery__4.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__5.jpg">
+                    <img src="./img/gallery/gallery__5.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__6.jpg">
+                    <img src="./img/gallery/gallery__6.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__7.jpg">
+                    <img src="./img/gallery/gallery__7.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__8.jpg">
+                    <img src="./img/gallery/gallery__8.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__9.jpg">
+                    <img src="./img/gallery/gallery__9.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__10.jpg">
+                    <img src="./img/gallery/gallery__10.jpg" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__11.png">
+                    <img src="./img/gallery/gallery__11.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__12.png">
+                    <img src="./img/gallery/gallery__12.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__13.png">
+                    <img src="./img/gallery/gallery__13.png" alt="">
+                </a>
+                <a class="swiper-slide fancybox-link" href="./img/gallery/gallery__14.jpg">
+                    <img src="./img/gallery/gallery__14.jpg" alt="">
+                </a>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section> <!-- PRODUCT PARAMETERS -->
+
+                <section class="block-form">
+    <div class="container">
+        <div class="block-form__inner">
+            <div class="block-form__title wow fadeInUp">
+                Заказ по телефону
+            </div>
+            <div class="block-form__text wow fadeInUp">
+                Укажите свой контактный телефон, и мы Вам перезвоним в ближайшие несколько минут
+            </div>
+            <form class="form popup__form wow fadeInUp">
+                <label>
+                    Фамилия, Имя
+                    <span class="star">*</span>
+                    <input type="text" maxlength="100">
+                </label>
+                <label>
+                    Телефон
+                    <span class="star">*</span>
+                    <input type="text" class="form__phone" placeholder="+7-999-999-9999">
+                </label>
+                <button class="btn-red">
+                    Я жду звонка
+                </button>
+            </form>
+        </div>
+    </div>
+</section> <!-- ORDER BY PHONE -->
+            </main>
+        </div>
+
+        <footer class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <div class="footer__col">
+                <div class="footer__text">
+                    © 2024, t-m.kz — специализированный <br />
+                    интернет-магазин станков, инструментов и оборудования.
+                </div>
+                <a href="/sitemap.html" class="underline">
+                    Карта сайта
+                </a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__text">
+                    Телефоны:
+                </div>
+                <a href="tel:+77471294747">
+                    +7 (747) 129-47-47
+                </a>
+                <br />
+                <a href="tel:+7762061616">
+                    + (776) 206-16-16
+                </a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__text">
+                    Почта для заказов:
+                </div>
+                <a href="mailTo:sale@toolsmart.kz" class="underline">
+                    sale@toolsmart.kz
+                </a>
+            </div>
+            <div class="footer__col">
+                <div class="footer__text">
+                    Мы в социальных сетях:
+                </div>
+                <ul class="socials">
+                    <li>
+                        <a href="https://www.facebook.com/toolsmart.kz" target="_blank" class="fb"></a>
+                    </li>
+                    <li>
+                        <a href="http://www.youtube.com/channel/UC1RKWHI5jSjLpJ17dfqF6Vw" target="_blank" class="yt"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__col">
+                <div class="footer__text">
+                    Разработка сайта:
+                </div>
+                <a href="http://www.instinct.kz/" target="_blank">Instinct</a>
+            </div>
+        </div>
+    </div>
+</footer> <!-- FOOTER -->
+
+		<a class="wp_link" href="https://wa.me/77471294747">
+			<img src="./img/icons/icon__whatsapp.png" alt="Наши контакты в whatsapp">
+		</a>
+    </div>
+
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/fancybox.js"></script>
+    <script src="./js/magnific-popup.min.js"></script>
+    <script src="./js/jquery.mask.js"></script>
+    <script src="./js/swiper.min.js"></script>
+    <script src="./js/wow.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
